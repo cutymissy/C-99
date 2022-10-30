@@ -12,11 +12,15 @@ recgonition.onresult = funciton(event)
  {
     console.log(event);
 
-    var Content = event.results[0][0].transcript;
-    console.log(Content);
-    
+     var Content = event.results[0][0].transcript;
     document.getElementById("textbox").innerHTML = Content;
-    speak();
+    console.log(Content);
+    if(Content=="take my selfie")
+    {
+        console.log("taking selfie");
+        speak();
+    }
+    
 }
 
 function speak()
